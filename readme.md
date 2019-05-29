@@ -7,7 +7,7 @@
 [電子發票說明] 
 
 [電子發票說明]:
-    http://cloud.google.com/natural-language
+    https://github.com/AstralWebTW/ElectronicInvoice/blob/master/%E9%9B%BB%E5%AD%90%E7%99%BC%E7%A5%A8%E8%AA%AA%E6%98%8E.pdf
 
 ## Setup
 
