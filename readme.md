@@ -23,3 +23,50 @@
 
 所以只需於後台設定完成後將YOUR_BASE_URL/electronic-invoice/account/einvoice此連結放於自訂位置即可
 
+
+## 安裝方式 1
+### 使用 Composer（ 推薦 ）：
+於 ```/composer.json``` 檔案內新增以下欄位
+> 避免正式上線後系統產生錯誤，建議版本給予至第三位小數點
+
+```json
+"require": {
+        //...
+        "astralweb/post-management": "1.0.0"
+    },
+"repositories": [
+          //...
+          {
+              "type": "vcs",
+              "url":  "git@github.com:AstralWebTW/post-management.git"
+          }
+      ]
+```
+
+接著於 ```Command line``` 中輸入以下指令：
+
+```sh
+composer update
+```
+>若是權限不足的話，可以給予 ```sudo```權限
+
+因為本套件放在私有 ```Repo``` 內，Github 會要求需要使用 Token
+
+等待 Composer 計算完套件相依性，並把套件下載後，接著執行
+
+```sh
+ bin/magneto setup:upgrade
+```
+完成安裝
+
+<br><br>
+
+## 安裝方式 2
+### 直接下載 Repo：
+
+把 Repo 下載後，複製至專案資料夾 ```/app/code/astralweb/post```  內，接著執行指令即可完成安裝(若沒有資料夾請自行建立)。
+
+```sh
+bin/magneto setup:upgrade
+```
+<br><br>
