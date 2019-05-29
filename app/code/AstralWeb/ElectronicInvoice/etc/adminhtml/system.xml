@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+        <tab id="astralweb" translate="label" sortOrder="115">
+            <label>AstralWeb</label>
+        </tab>
+
+        <section id="e_invoice" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Electronic Invoice</label>
+            <tab>astralweb</tab>
+            <resource>AstralWeb_ElectronicInvoice::e_invoice</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="sandbox" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sandbox Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Yes = Testing mode, No = Production mode.
+                    </comment>
+                </field>
+                <field id="card_ban" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CARD_BAN</label>
+                    <comment>
+                        統一編號
+                    </comment>
+                </field>
+                <field id="back_url" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>BACK_URL</label>
+                    <comment>
+                        回傳網址(不需包含BASE_URL)，無特殊情況留空保持Default即可。  Default = 'YOUR_BASE_URL/electronic-invoice/account/einvoice'
+                    </comment>
+                </field>
+                <field id="card_type" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CARD_TYPE</label>
+                    <comment>
+                        營業人載具 (需先申請 eg.'ER00XX')
+                    </comment>
+                </field>
+                <field id="attribute" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>會員attribute</label>
+                    <comment>
+                        需歸戶至手機載具或自然人憑證載具的會員attribute_code，此attribute為每個會員存放電子發票的載具。例如會員編號、會員卡號等等，請注意每個會員不可重複。
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+
+</config>
