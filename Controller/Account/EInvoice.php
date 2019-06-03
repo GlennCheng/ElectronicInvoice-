@@ -200,10 +200,10 @@ class EInvoice extends Action
 
         $userId = $customer->getCustomAttribute('user_id_str')
             ? $customer->getCustomAttribute('user_id_str')->getValue()
-            : '';
+            : ''
         $accountStr =  $customer->getCustomAttribute('account_str')
             ? $customer->getCustomAttribute('account_str')->getValue()
-            : '';
+            : ''
 
         if ($accountStr) {
             if ($md5Account == md5($accountStr) && $userId == base64_decode($userIdBase64)) {
